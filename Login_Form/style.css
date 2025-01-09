@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:"Poppins", serif;
+   
+}
+
+.container{
+    background: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+  border: 1px solid rgb(95, 87, 87);
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px black;
+  width: 35%;
+  padding: 30px;
+}
+label{
+    display: block;
+}
+
+header{
+    text-align: center;
+   
+}
+
+#password{
+     display: inline;
+}
+
+.pss-input{
+    /* border: 2px solid blue; */
+    display: flex;
+}
+img{
+    /* border: 3px solid black; */
+    margin-right:3px ;
+}
+
+.section{
+    /* border: 2px solid red; */
+    margin: 2px;
+}
+input{
+    width: 100%;
+    padding: 2px;
+    border:none;
+   outline: none;
+}
+
+label{
+    padding:2px;
+}
+
+
+.border{
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+#btn{
+    margin-top:6px;
+    border-radius: 3px;
+    padding: 8px;
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.icon{
+    cursor: pointer;
+}
+
+.msg{
+   color: red;
+   display: none;
+   font-size: smaller;
+}
+
+.show-pass{
+    display: none;
+}
+.show-repass{
+    display: none;
+}
+.greenBorder{
+    border: 2px solid green;
+    border-radius: 6px;
+}
+.redBorder{
+    border: 2px solid red;
+    border-radius: 6px;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.section{
+    margin: 15px 0;
+}

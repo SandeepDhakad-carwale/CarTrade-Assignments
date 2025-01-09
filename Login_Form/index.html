@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Form @Carwale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form class="form-container">
+            <header>
+                <h2>Sign Up</h2>
+            </header>
+
+            <div class="form-body">
+                <div class="section">
+                    <label for="username">Username:</label>
+                    <div class="border userBorder">
+                        <input type="text" id="username" placeholder="Enter your username">
+                    </div>
+                    
+                    <p class="username-msg msg">Username must be between 3 and 25 characters</p>
+
+                </div>
+
+                <div class="section">
+                    <label for="email">Email:</label>
+                    <div class="border emailBorder">
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+                   
+                    <p class="msg emailmsg">Please enter a valid email</p>
+                </div>
+
+                <div class="section">
+                    <label for="password">Password:</label>
+                    <div class="border passBorder">
+                        <div class="pss-input">
+                            <input type="password" id="password" placeholder="Enter password">
+    
+                            <img class="icon pass-icon" src="./icons/open-eye.png" alt="show password">
+                           
+    
+                        </div>  
+                    </div>
+                
+                    <p class="passmsg msg">
+                        Password must has at least 8 characters that include at least 1 lowercase character,1 uppercase character, 1 number, and 1 special character in(!@#$%^&*)
+                    </p>
+                </div>
+
+                <div class="section">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <div class="border cpassBorder">
+                        <div class="pss-input">
+                            <input type="password" id="confirmPassword" placeholder="Reenter your password">
+                            <img class="icon repass-icon" src="./icons/open-eye.png" alt="show password">
+                           
+                        </div>
+                    </div>
+                    
+
+                    <p class="cpassmsg msg">Please enter the password again</p>
+                </div>
+            </div>
+
+            <div class="footer">
+                <input type="submit" name="SING UP" id="btn">
+            </div>
+        </form>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
