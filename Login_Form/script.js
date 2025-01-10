@@ -44,7 +44,7 @@ if(confirmPassword.type=="text"){
 
  const username=document.getElementById("username");
 
- username.addEventListener('change',()=>{
+ username.addEventListener('input',()=>{
  const usermsg=document.getElementsByClassName("username-msg")[0];
  const userBorder=document.getElementsByClassName("userBorder")[0];
 
@@ -69,7 +69,7 @@ if(confirmPassword.type=="text"){
  
  
  const email=document.getElementById("email");
- email.addEventListener('change',()=>{
+ email.addEventListener('input',()=>{
  const emailmsg=document.getElementsByClassName("emailmsg")[0];
  const emailBorder=document.getElementsByClassName("emailBorder")[0];
  
@@ -100,7 +100,7 @@ if(confirmPassword.type=="text"){
  
  
  const  password=document.getElementById("password");
- password.addEventListener('change',()=>{
+ password.addEventListener('input',()=>{
  const passmsg=document.getElementsByClassName("passmsg")[0];
  const passBorder=document.getElementsByClassName("passBorder")[0];
 
@@ -149,7 +149,7 @@ if(confirmPassword.type=="text"){
 
 
  const confirmPassword=document.getElementById("confirmPassword");
- confirmPassword.addEventListener('change',()=>{
+ confirmPassword.addEventListener('input',()=>{
  const cpassBorder=document.getElementsByClassName('cpassBorder')[0];
  const cpassmsg=document.getElementsByClassName('cpassmsg')[0];
 
