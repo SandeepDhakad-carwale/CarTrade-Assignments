@@ -1,0 +1,58 @@
+
+.filterContainer{
+    width: 25%;
+    height: 500px;
+    border: 1px solid rgb(201, 197, 197);
+    border-radius: 7px;
+    position: sticky;
+    top: 80px;
+    left: 0;
+    overflow: scroll;
+    display: block;
+}
+
+.filterContainer::-webkit-scrollbar{
+    display: none;
+}
+
+
+.filterHeading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-inline: 8px;
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+ 
+}
+
+.right{
+    padding-top: 6px;
+    color: blue;
+    font-weight:600;
+}
+
+.checkboxs{
+    margin-top: 20px;
+}
+.checkbox{
+    padding: 5px 18px;
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+.budgetHeading{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 15px;
+    margin: 19px 0;
+}
+
+.clearAll:hover{
+   cursor: pointer;
+}

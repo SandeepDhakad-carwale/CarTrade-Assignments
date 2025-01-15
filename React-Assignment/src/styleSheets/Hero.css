@@ -1,0 +1,11 @@
+.heroContainer{
+    width: 73%;
+   
+    /* border: 2px solid pink; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+   row-gap: 30px;
+}

@@ -1,0 +1,37 @@
+.container {
+    text-align: start;
+    margin-top: 10px;
+     padding-bottom: 30px;
+  }
+
+  .fuelHeading{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 15px;
+  }
+  
+  .arrow-btn {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transition: transform 0.5s ease; 
+  }
+  
+  .arrow-btn.rotated {
+    transform: rotate(180deg); 
+  }
+  
+  .dropdown-banner {
+    max-height: 0; 
+    overflow: hidden; 
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    transition: max-height 0.5s ease; 
+  }
+  
+  .dropdown-banner.open {
+    max-height: 400px; 
+    
+  }

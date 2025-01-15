@@ -1,0 +1,9 @@
+.layout{
+    margin-top: 100px;
+    width: 100vw;
+    padding-inline: 10%;
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

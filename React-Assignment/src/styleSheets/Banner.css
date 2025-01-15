@@ -1,0 +1,69 @@
+.container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .arrow-btn {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transition: transform 0.5s ease; 
+  }
+  
+  .arrow-btn.rotated {
+    transform: rotate(180deg); 
+  }
+  
+  .dropdown-banner {
+    max-height: 0; 
+    overflow: hidden; 
+    background-color: #f4f4f4;
+    /* border: 1px solid #ddd; */
+    transition: max-height 0.5s ease; 
+  }
+  
+  .dropdown-banner.open {
+    max-height: 400px; 
+    
+  }
+  
+  .customizeBtn{
+    padding: 15px 0 20px 15px;
+    color: rgb(50, 22, 206);
+    font: medium;
+    text-align: left;
+    
+  }
+  .customizeBtn:hover{
+    cursor: pointer;
+  }
+  .customize{
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease; 
+  }
+
+  .customize-open{
+    max-height: 100px;
+  }
+.budget-input{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    width: 100%;
+   padding-inline: 20px;
+   margin-top: 15px;
+}
+ .budget-input>input{
+    width: 30%;
+    height: 40px;
+    text-align: center;
+}
+
+.error{
+
+    color: red;
+    padding: 3px;
+}
