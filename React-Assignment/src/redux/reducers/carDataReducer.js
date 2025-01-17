@@ -1,6 +1,6 @@
 const initialState = {
     fuel: [],
-    budget: { start: 8, end: 16 },   // bydefault 8-16 rakh rhe h 
+    budget: { start: 0, end: 99 },   // bydefault 8-16 rakh rhe h 
     filteredCars: [], 
     loading: false,
   };
