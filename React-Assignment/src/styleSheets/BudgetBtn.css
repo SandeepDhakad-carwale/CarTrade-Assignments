@@ -7,5 +7,6 @@
 
 .btn:hover{
     cursor: pointer;
+    background: gray;
 }
 

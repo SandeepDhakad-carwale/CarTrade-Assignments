@@ -1,6 +1,6 @@
 .layout{
     margin-top: 100px;
-    width: 100vw;
+    width: 100%;
     padding-inline: 10%;
     /* border: 2px solid blue; */
     display: flex;

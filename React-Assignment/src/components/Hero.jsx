@@ -14,8 +14,8 @@ const Hero = () => {
     <div className='heroContainer'>
       <Sort/>
       {filteredCars && filteredCars.length > 0
-    ? filteredCars.map((carDetail) => (
-        <Card key={carDetail.profileId.toString()} carDetail={carDetail} />
+    ? filteredCars.map((carDetail,ind) => (
+        <Card key={carDetail.profileId.toString()+ind} carDetail={carDetail} />
       ))
     : ""}
         

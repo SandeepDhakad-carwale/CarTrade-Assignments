@@ -3,6 +3,7 @@ import '../styleSheets/layout.css'
 import Filter from './Filter'
 import Hero from './Hero'
 import Header from './Header'
+import Loader from './Loader.jsx'
 
 import { useSelector,useDispatch } from "react-redux";
 import { setFuel, setBudget, fetchFilteredCars } from '../redux/actions/carDataActions.js'
@@ -22,6 +23,7 @@ const Layout = () => {
 
   return (
    <>
+   {loading && <Loader/>}
     <Header/>
    <div className="layout">
    <Filter/>
