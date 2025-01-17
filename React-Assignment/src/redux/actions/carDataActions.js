@@ -1,3 +1,5 @@
+import sortCars from "../../utils/sort";
+
 export const setFuel = (fuel) => {
     return {
       type: "SET_FUEL",
@@ -17,9 +19,16 @@ export const setFuel = (fuel) => {
       payload:filteredCars
     }
   }
+
+  export const setSortBy=(sortBy)=>{
+      return{
+        type:"SET_SORTBY",
+        payload:sortBy
+      }
+  }
   
   export const fetchFilteredCars = () => async (dispatch, getState) => {
-    const { fuel, budget } = getState().carData; 
+    const { fuel, budget,sortBy } = getState().carData; 
     dispatch({ type: "FETCH_CARS_REQUEST" });
   
     try {
@@ -28,8 +37,11 @@ export const setFuel = (fuel) => {
       const response = await fetch(url);
       const data = await response.json();
       // console.log("data :",data.stocks)
-      
-      dispatch({ type: "FETCH_CARS_SUCCESS", payload: data.stocks });
+      const cars=data.stocks;
+      console.log("cars :",cars)
+      const sortedData=sortCars(cars,sortBy);
+      console.log("sortedcars :",sortedData)
+      dispatch({ type: "FETCH_CARS_SUCCESS", payload:sortedData});
     } catch (error) {
       console.log("error in fetching data :",error);
     }

@@ -2,6 +2,7 @@ const initialState = {
     fuel: [],
     budget: { start: 0, end: 99 },   // bydefault 8-16 rakh rhe h 
     filteredCars: [], 
+    sortBy:"default",
     loading: false,
   };
   
@@ -21,7 +22,9 @@ const initialState = {
   
       case "FETCH_CARS_SUCCESS":
         return { ...state, loading: false, filteredCars: action.payload }; // we have to give array of carDetails as a payload
-  
+    
+        case "SET_SORTBY":
+      return{...state,sortBy:action.payload}
   
       default:
         return state;
