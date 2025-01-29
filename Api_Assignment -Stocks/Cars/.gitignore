@@ -1,0 +1,89 @@
+## .NET Core ##
+# Windows image file system
+Thumbs.db
+
+# User-specific files
+.vs/
+.vscode/
+.idea/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+
+# .NET Core tools
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Azure Functions
+.local/
+
+# ASP.NET Core files
+wwwroot/
+
+# Configuration files
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Staging.json
+appsettings.json
+appsettings.*.json
+
+# Secret files that contain sensitive information
+secrets/
+
+# NPM packages
+node_modules/
+
+# ASP.NET Core temporary files
+Generated\_/
+
+# Microsoft Visual Studio for Mac
+.idea/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# JetBrains Rider settings
+.idea/
+
+# Backup files
+*.bak
+*.bkp
+
+# Logs
+logs/
+
+# Entity Framework Core migrations
+Migrations/
+
+# User-generated files
+*.suo
+*.user
+*.userosscache
+
+# MacOS system files
+.DS_Store
+
+# Linux swap files
+*.swp
+
+# Docker files
+Dockerfile*
+docker-compose*
+
+# JetBrains Rider files
+.idea/
+
+# VS Code settings
+.vscode/
+
+# ASP.NET Core (project-related)
+*.csproj.user

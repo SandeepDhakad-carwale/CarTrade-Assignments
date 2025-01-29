@@ -1,0 +1,4 @@
+  always store DB password in environment variable 
+  Default to 0 if MinBudget is null
+  Default to int.MaxValue if MaxBudget is null
+  Default to "All" FuelType if FuelTypes is null
