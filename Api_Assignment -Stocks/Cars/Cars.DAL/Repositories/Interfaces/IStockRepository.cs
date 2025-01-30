@@ -3,11 +3,12 @@ using Cars.Domains;
 
 namespace Cars.DAL.Repositories
 {
-    public interface IStockRepository
-    {
-        IEnumerable<Stock> GetStocksByFilter(Filters filter);
-        Stock GetById(int id);
-        void DeleteById(int id);
-        void AddStock(Stock stock);
-    }
+  public interface IStockRepository
+{
+    Task<IEnumerable<Stock>> GetStocksByFilterAsync(Filters filter);
+    Task<Stock?> GetByIdAsync(int id);
+    Task DeleteByIdAsync(int id);
+    Task AddStockAsync(Stock stock);
+}
+
 }

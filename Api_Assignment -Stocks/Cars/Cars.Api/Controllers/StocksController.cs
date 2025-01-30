@@ -20,19 +20,19 @@ namespace Cars.API.Controllers
 
        
         [HttpGet("getStocks")]
-         public ActionResult<List<StockDTO>> GetStocksByFilter([FromQuery] QueryDTO queryDto)
+         public async Task<ActionResult<List<StockDTO>>> GetStocksByFilter([FromQuery] QueryDTO queryDto)
 {
     Console.WriteLine("hello.............");
     
-    var stockDtos = _stockService.GetStocksByFilter(queryDto);
+    var stockDtos =await _stockService.GetStocksByFilter(queryDto);
     return Ok(stockDtos);
 }
 
 
       [HttpGet("{id}")]
-        public ActionResult<StockDTO> GetStockById(int id)
+        public async Task<ActionResult<StockDTO>> GetStockById(int id)
         {
-            var stock = _stockService.GetStockById(id);
+            var stock = await _stockService.GetStockById(id);
             if (stock == null)
             {
                 return NotFound($"Stock with ID {id} not found.");
@@ -40,22 +40,23 @@ namespace Cars.API.Controllers
             return Ok(stock);
         }
 
-        [HttpDelete("{id}")]
-        public ActionResult DeleteStock(int id)
-        {
-            try
-            {
-                _stockService.DeleteStock(id);
-                return NoContent();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest($"Error deleting stock with ID {id}: {ex.Message}");
-            }
-        }
+       [HttpDelete("{id}")]
+public async Task<ActionResult> DeleteStock(int id)
+{
+    try
+    {
+       await _stockService.DeleteStock(id);
+        return Ok(new { message = "Deleted successfully" });
+    }
+    catch (Exception ex)
+    {
+        return BadRequest($"Error deleting stock with ID {id}: {ex.Message}");
+    }
+}
+
 
         [HttpPost("addStock")]
-        public ActionResult AddStock([FromBody] InputDTO inptDto)
+        public async Task<ActionResult> AddStock([FromBody] InputDTO inptDto)
         {
             if (inptDto == null)
             {
@@ -64,7 +65,7 @@ namespace Cars.API.Controllers
 
             try
             {
-                _stockService.AddStock(inptDto);
+               await _stockService.AddStock(inptDto);
                 return Ok(new { message = "Stock added successfully" });
             }
             catch (Exception ex)

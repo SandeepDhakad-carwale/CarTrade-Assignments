@@ -12,19 +12,19 @@ namespace Cars.BLL.Services
         private readonly IStockRepository _stockRepository;
         private readonly IMapper _mapper;
 
-        public StockService(IStockRepository stockRepository, IMapper mapper)
+        public  StockService(IStockRepository stockRepository, IMapper mapper)
         {
             _stockRepository = stockRepository;
             _mapper = mapper;
         }
 
-        public List<StockDTO> GetStocksByFilter(QueryDTO queryDto)
+        public async Task<List<StockDTO>> GetStocksByFilter(QueryDTO queryDto)
 {
     try
     {
         var filter = _mapper.Map<Filters>(queryDto);
 
-        var stocks = _stockRepository.GetStocksByFilter(filter);
+        var stocks =await  _stockRepository.GetStocksByFilterAsync(filter);
 
         var stockDtos = _mapper.Map<List<StockDTO>>(stocks);
             
@@ -43,11 +43,11 @@ namespace Cars.BLL.Services
 }
 
 
- public StockDTO GetStockById(int id)
+ public async Task<StockDTO> GetStockById(int id)
         {
             try
             {
-                var stock = _stockRepository.GetById(id);
+                var stock = await _stockRepository.GetByIdAsync(id);
 
                 if (stock == null)
                 {
@@ -66,11 +66,11 @@ namespace Cars.BLL.Services
             }
         }
 
-        public void DeleteStock(int id)
+        public async Task DeleteStock(int id)
         {
             try
             {
-                _stockRepository.DeleteById(id);
+               await _stockRepository.DeleteByIdAsync(id);
             }
             catch (Exception ex)
             {
@@ -78,13 +78,13 @@ namespace Cars.BLL.Services
             }
         }
 
-        public void AddStock(InputDTO stk)
+        public async Task AddStock(InputDTO stk)
         {
             try
             {
                 var stock = _mapper.Map<Stock>(stk);
 
-                _stockRepository.AddStock(stock);
+               await _stockRepository.AddStockAsync(stock);
             }
             catch (Exception ex)
             {

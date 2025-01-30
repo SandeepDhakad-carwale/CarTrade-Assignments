@@ -13,7 +13,7 @@ namespace Cars.BLL.Helpers{
             continue; 
         }
 
-        if (stock.Price < 20 && stock.Kms >= 0 && stock.Kms < 10000)
+        if (stock.Price < 2 && stock.Kms >= 0 && stock.Kms < 10000)
         {
             stock.IsValueForMoney = true;
         }

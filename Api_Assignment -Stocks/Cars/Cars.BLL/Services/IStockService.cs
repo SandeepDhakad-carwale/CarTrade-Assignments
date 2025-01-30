@@ -5,12 +5,12 @@ namespace Cars.BLL.Services
 {
     public interface IStockService
     {
-        List<StockDTO> GetStocksByFilter(QueryDTO queryDto);
+        Task<List<StockDTO>> GetStocksByFilter(QueryDTO queryDto);
 
-        StockDTO GetStockById(int id);
+        Task<StockDTO> GetStockById(int id);
 
-        void DeleteStock(int id);
+        Task DeleteStock(int id);
 
-        void AddStock(InputDTO stk);
+        Task AddStock(InputDTO stk);
     }
 }

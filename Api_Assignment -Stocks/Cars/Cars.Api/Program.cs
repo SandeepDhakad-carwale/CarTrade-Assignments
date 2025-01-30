@@ -15,7 +15,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // Register DatabaseContext with connection string
-builder.Services.AddSingleton<DatabaseContext>(sp =>
+builder.Services.AddScoped<DatabaseContext>(sp =>
     new DatabaseContext(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Register repositories and services
